@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeHeaderViewCell" customModule="Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="416"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="416"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="SDT-ua-3ki" customClass="ShimmerImageView" customModule="Test" customModuleProvider="target">
+                        <rect key="frame" x="16" y="8" width="382" height="263"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="263" id="1j8-2v-if6"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoG-CW-Za7" customClass="ShimmerLabelView" customModule="Test" customModuleProvider="target">
+                        <rect key="frame" x="16" y="287" width="382" height="47"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="47" id="ljz-cw-crc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zp-tG-TYW" customClass="ShimmerLabelView" customModule="Test" customModuleProvider="target">
+                        <rect key="frame" x="16" y="342" width="382" height="57.5"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SDT-ua-3ki" secondAttribute="trailing" constant="16" id="6j0-Q1-CBI"/>
+                <constraint firstItem="SDT-ua-3ki" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="9Yr-Dj-LHa"/>
+                <constraint firstItem="eoG-CW-Za7" firstAttribute="leading" secondItem="SDT-ua-3ki" secondAttribute="leading" id="Jvy-H1-wqj"/>
+                <constraint firstItem="6zp-tG-TYW" firstAttribute="leading" secondItem="eoG-CW-Za7" secondAttribute="leading" id="Obe-NX-HFO"/>
+                <constraint firstItem="eoG-CW-Za7" firstAttribute="trailing" secondItem="SDT-ua-3ki" secondAttribute="trailing" id="T7g-ef-DEf"/>
+                <constraint firstItem="6zp-tG-TYW" firstAttribute="top" secondItem="eoG-CW-Za7" secondAttribute="bottom" constant="8" id="Teb-kl-oeK"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="6zp-tG-TYW" secondAttribute="bottom" constant="16.5" id="XxB-cZ-1rA"/>
+                <constraint firstItem="eoG-CW-Za7" firstAttribute="top" secondItem="SDT-ua-3ki" secondAttribute="bottom" constant="16" id="YK1-V0-Q8d"/>
+                <constraint firstItem="SDT-ua-3ki" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="ZSv-Hb-um6"/>
+                <constraint firstItem="6zp-tG-TYW" firstAttribute="trailing" secondItem="eoG-CW-Za7" secondAttribute="trailing" id="aHd-1w-Vco"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="418" height="420"/>
+            <connections>
+                <outlet property="headerImage" destination="SDT-ua-3ki" id="Ael-JZ-Bnm"/>
+                <outlet property="headerSubtitle" destination="6zp-tG-TYW" id="9SS-rS-lWG"/>
+                <outlet property="headerTitle" destination="eoG-CW-Za7" id="6PZ-4M-9gQ"/>
+            </connections>
+            <point key="canvasLocation" x="79.710144927536234" y="81.026785714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_placeholder" width="187" height="189"/>
+    </resources>
+</document>

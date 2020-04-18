@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DetailVC-->
+        <scene sceneID="6fm-8S-MI2">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="gcF-Vi-X2b" customClass="DetailVC" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yYC-lp-CaG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="rcN-iN-W0l">
+                                <rect key="frame" x="0.0" y="112" width="414" height="784"/>
+                                <color key="backgroundColor" name="background"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="pkE-XW-mSU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" name="background"/>
+                                </view>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95h-Hh-6PI" customClass="NavigationView" customModule="Test" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="68"/>
+                                <color key="backgroundColor" name="background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="Sfj-yL-1Mg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mU8-N1-wMD">
+                                <rect key="frame" x="1" y="29" width="414" height="30"/>
+                                <color key="backgroundColor" name="background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Pg-7L-rIw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="rcN-iN-W0l" firstAttribute="trailing" secondItem="W6V-bd-tq7" secondAttribute="trailing" id="2Ul-C7-3Ir"/>
+                            <constraint firstItem="mU8-N1-wMD" firstAttribute="trailing" secondItem="W6V-bd-tq7" secondAttribute="trailing" constant="1" id="EOT-Ah-qbl"/>
+                            <constraint firstItem="95h-Hh-6PI" firstAttribute="leading" secondItem="W6V-bd-tq7" secondAttribute="leading" id="IB9-nh-x2t"/>
+                            <constraint firstItem="rcN-iN-W0l" firstAttribute="leading" secondItem="W6V-bd-tq7" secondAttribute="leading" id="Isx-nF-ms3"/>
+                            <constraint firstItem="rcN-iN-W0l" firstAttribute="top" secondItem="95h-Hh-6PI" secondAttribute="bottom" id="Kie-MZ-Vvh"/>
+                            <constraint firstItem="mU8-N1-wMD" firstAttribute="leading" secondItem="W6V-bd-tq7" secondAttribute="leading" constant="1" id="LeK-us-LHg"/>
+                            <constraint firstItem="95h-Hh-6PI" firstAttribute="top" secondItem="W6V-bd-tq7" secondAttribute="top" id="Mh1-5e-8oS"/>
+                            <constraint firstItem="W6V-bd-tq7" firstAttribute="top" secondItem="mU8-N1-wMD" secondAttribute="top" constant="15" id="add-3T-WXy"/>
+                            <constraint firstItem="95h-Hh-6PI" firstAttribute="trailing" secondItem="W6V-bd-tq7" secondAttribute="trailing" id="uNj-Zl-JA5"/>
+                            <constraint firstAttribute="bottom" secondItem="rcN-iN-W0l" secondAttribute="bottom" id="zRp-cY-PjY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W6V-bd-tq7"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailtableView" destination="rcN-iN-W0l" id="HVD-LM-bSe"/>
+                        <outlet property="navigationView" destination="95h-Hh-6PI" id="J6Q-Hm-W0r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YML-fF-ArR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="160.71428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

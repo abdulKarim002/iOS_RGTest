@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hello-->
+        <scene sceneID="4Dg-GR-VfX">
+            <objects>
+                <viewController storyboardIdentifier="Home" id="cJX-f5-p0A" customClass="HomeVC" customModule="Test" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RQ4-mg-S5q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nL9-CM-wDf">
+                                <rect key="frame" x="0.0" y="112" width="414" height="784"/>
+                                <color key="backgroundColor" name="background"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="9Fl-r7-Y29">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSv-Xb-Hdb" customClass="NavigationView" customModule="Test" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="68"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="07N-wW-sra"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZo-lW-dYZ">
+                                <rect key="frame" x="0.0" y="29" width="414" height="30"/>
+                                <color key="backgroundColor" name="background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tcf-hD-cKB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="dZo-lW-dYZ" firstAttribute="leading" secondItem="qJh-ra-nNJ" secondAttribute="leading" id="5VX-2o-gfh"/>
+                            <constraint firstItem="qJh-ra-nNJ" firstAttribute="top" secondItem="dZo-lW-dYZ" secondAttribute="top" constant="15" id="ATq-Cv-XFE"/>
+                            <constraint firstItem="nL9-CM-wDf" firstAttribute="trailing" secondItem="qJh-ra-nNJ" secondAttribute="trailing" id="Oi0-d8-R4o"/>
+                            <constraint firstItem="dZo-lW-dYZ" firstAttribute="trailing" secondItem="qJh-ra-nNJ" secondAttribute="trailing" id="PSw-0E-oBp"/>
+                            <constraint firstItem="nL9-CM-wDf" firstAttribute="leading" secondItem="qJh-ra-nNJ" secondAttribute="leading" id="UQG-B7-OxD"/>
+                            <constraint firstItem="SSv-Xb-Hdb" firstAttribute="leading" secondItem="qJh-ra-nNJ" secondAttribute="leading" id="gVr-Rh-A1G"/>
+                            <constraint firstItem="nL9-CM-wDf" firstAttribute="top" secondItem="SSv-Xb-Hdb" secondAttribute="bottom" id="hiN-AL-yhj"/>
+                            <constraint firstItem="SSv-Xb-Hdb" firstAttribute="top" secondItem="qJh-ra-nNJ" secondAttribute="top" id="lBM-Wd-BJd"/>
+                            <constraint firstAttribute="bottom" secondItem="nL9-CM-wDf" secondAttribute="bottom" id="q6b-BX-uNe"/>
+                            <constraint firstItem="qJh-ra-nNJ" firstAttribute="trailing" secondItem="SSv-Xb-Hdb" secondAttribute="trailing" id="wti-x6-srH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qJh-ra-nNJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hello" id="pjB-OV-J4p"/>
+                    <connections>
+                        <outlet property="homeCollectionView" destination="nL9-CM-wDf" id="9sc-T2-iZz"/>
+                        <outlet property="navigationView" destination="SSv-Xb-Hdb" id="8Zh-GK-34f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUX-8v-agL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871.01449275362324" y="140.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
