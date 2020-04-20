@@ -51,7 +51,7 @@ extension UIImageView {
         set { objc_setAssociatedObject(self, &UIImageView.urlKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
     }
 
-    func loadImageAsync(with urlString: String?) {
+    func loadImageAsync(with urlString: String?, placeholder:UIImage?) {
         // cancel prior task, if any
 
         weak var oldTask = currentTask
@@ -60,7 +60,7 @@ extension UIImageView {
 
         // reset imageview's image
 
-        self.image = nil
+        self.image = placeholder
 
         // allow supplying of `nil` to remove old image and then return immediately
 
