@@ -30,7 +30,7 @@ class HomeHeaderViewCell: UICollectionViewCell {
         headerTitle.text = src.title
         headerSubtitle.text = src.subtitle
         
-        headerImage.loadImageAsync(with: src.imageUrl)
+        headerImage.loadImageAsync(with: src.imageUrl, placeholder: UIImage(named: "ic_placeholder"))
     }
     
     private func stopLoading() {

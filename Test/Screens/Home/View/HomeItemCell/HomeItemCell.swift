@@ -33,20 +33,8 @@ class HomeItemCell: UICollectionViewCell {
          }
         
         itemTitle.text = source.title
-        itemImage.loadImageAsync(with: source.imageUrl)
-        
-//        let url = URL(string: source.imageUrl)
-//        let processor = RoundCornerImageProcessor(cornerRadius: UIConstant.radius * 5)
-//        itemImage.kf.indicatorType = .activity
-//        itemImage.kf.setImage(
-//            with: url,
-//            placeholder: UIImage(named: "ic_placeholder"),
-//            options: [
-//                .processor(processor),
-//                .scaleFactor(UIScreen.main.scale),
-//                .transition(.fade(1)),
-//                .cacheOriginalImage
-//            ])
+        itemImage.loadImageAsync(with: source.imageUrl, placeholder: UIImage(named: "ic_placeholder"))
+
     }
     
     private func stopLoading() {

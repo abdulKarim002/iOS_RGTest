@@ -54,7 +54,7 @@ class HomeVM {
             let imageUrl = item.enclosure!.attributes!.url!
             let htmlData = item.content!.contentEncoded!
             let pubDate = item.pubDate!
-            let author = item.author ?? "-"
+            let author = item.dublinCore?.dcCreator ?? "-"
             
             let modelObj = HomeModel(title: title, subtitle: subtitle, imageUrl: imageUrl, htmlData: htmlData, pubDate: pubDate, author : author)
             if ctr == 0 {
@@ -74,12 +74,27 @@ class HomeVM {
     func getNoOfCell() -> Int {
         return itemModel.count
     }
+    
+    func calculateViewHeightWithCurrentWidth(text:String) -> CGFloat {
+        let messageText = text
+         let size = CGSize.init(width: 250, height: 500)
+         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+         let estimateFrame = NSString(string: messageText).boundingRect(with:  size, options: options, attributes: [NSAttributedString.Key.font: UIFont(name: "Roboto", size: 14)!], context: nil)
+        return estimateFrame.height
+    }
 }
 
 extension HomeVC:  UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: 414, height: 416)
+        if isLoading {
+          return CGSize(width: 414, height: 416)
+        }
+        let data = viewModel.headerModel.first
+        let dynamicHeight = viewModel.calculateViewHeightWithCurrentWidth(text: data!.subtitle)
+        // 358 is the calcu height of titleImage+titletext+spacebetweenUI element
+        return CGSize(width: 414, height: dynamicHeight + 350 )
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind:

@@ -27,7 +27,7 @@ class DetailHeaderCell: UITableViewCell {
     }
     
     func populateDataWith(src:HomeModel) {
-        detailImageView.loadImageAsync(with: src.imageUrl)
+        detailImageView.loadImageAsync(with: src.imageUrl, placeholder: UIImage(named: "ic_placeholder"))
         dateAndAuthorName.text = "\(src.pubDate.getDateFormateby("MMM d")) . \(src.author)"
         detailImageView.clipsToBounds = true
         detailImageView.layer.cornerRadius = UIConstant.radius*2
