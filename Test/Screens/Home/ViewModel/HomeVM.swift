@@ -110,7 +110,7 @@ extension HomeVC:  UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if isLoading {
-            return 5
+            return 4
         }else {
             return viewModel.itemModel.count
         }
@@ -134,9 +134,9 @@ extension HomeVC:  UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
        return UIEdgeInsets(top: CGFloat(0), left: CGFloat(16), bottom: CGFloat(0), right: CGFloat(16))
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        return CGSize(width: view.getCellWidth() , height: 300)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+//        return CGSize(width: view.getCellWidth() , height: 300)
+//    }
     
 
 

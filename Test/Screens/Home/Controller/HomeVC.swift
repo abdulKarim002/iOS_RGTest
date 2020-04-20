@@ -43,6 +43,10 @@ class HomeVC: UIViewController {
         
         homeCollectionView.register(HomeItemCell.nib, forCellWithReuseIdentifier: HomeItemCell.identifier)
         homeCollectionView.register(HomeHeaderViewCell.nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier:HomeHeaderViewCell.identifier)
+        
+        if let flowLayout = homeCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+           flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

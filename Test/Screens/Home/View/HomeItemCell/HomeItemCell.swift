@@ -16,12 +16,14 @@ protocol AnimationEndNowNavigate:class {
 class HomeItemCell: UICollectionViewCell {
     @IBOutlet weak var itemImage: ShimmerImageView!
     @IBOutlet weak var itemTitle: ShimmerLabelView!
+    @IBOutlet weak var widthOfCell: NSLayoutConstraint!
     
     weak var cellTouchDelegate:AnimationEndNowNavigate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        widthOfCell.constant = contentView.getCellWidth()
     }
     
     func populateData(with source:HomeModel, isLoading:Bool) {

@@ -25,10 +25,11 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="OtF-5l-JT7" customClass="ShimmerImageView" customModule="Test" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="183" height="240"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="183" id="N62-fa-Uay"/>
                             <constraint firstAttribute="height" constant="240" id="aw9-Kp-xdT"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2X2-6Y-nRR" customClass="ShimmerLabelView" customModule="Test" customModuleProvider="target">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2X2-6Y-nRR" customClass="ShimmerLabelView" customModule="Test" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="248" width="183" height="60"/>
                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                         <nil key="textColor"/>
@@ -49,6 +50,7 @@
             <connections>
                 <outlet property="itemImage" destination="OtF-5l-JT7" id="aGr-zm-VMa"/>
                 <outlet property="itemTitle" destination="2X2-6Y-nRR" id="1um-ve-hHM"/>
+                <outlet property="widthOfCell" destination="N62-fa-Uay" id="qYw-zB-Kyw"/>
             </connections>
             <point key="canvasLocation" x="136.95652173913044" y="130.58035714285714"/>
         </collectionViewCell>
