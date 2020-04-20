@@ -136,6 +136,7 @@
 		96281434244A561100A2A7D8 /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96281433244A561100A2A7D8 /* Shimmer.swift */; };
 		96281436244A62AA00A2A7D8 /* DetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96281435244A62AA00A2A7D8 /* DetailVM.swift */; };
 		96281438244A707500A2A7D8 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96281437244A707500A2A7D8 /* Date+Extension.swift */; };
+		9650E400244DDFAA006802EF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9650E3FF244DDFAA006802EF /* ImageCache.swift */; };
 		B6CC726BBA0E165CBFC5F8F2 /* Pods_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3028EA4D19926553182F036 /* Pods_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -272,6 +273,7 @@
 		96281433244A561100A2A7D8 /* Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shimmer.swift; sourceTree = "<group>"; };
 		96281435244A62AA00A2A7D8 /* DetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVM.swift; sourceTree = "<group>"; };
 		96281437244A707500A2A7D8 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		9650E3FF244DDFAA006802EF /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		A3028EA4D19926553182F036 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB32836BCB4A079D1D7617EA /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -537,6 +539,7 @@
 		9628132B244A2B3F00A2A7D8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				9650E3FC244DDF6F006802EF /* ImageCacher */,
 				9628134A244A3C8400A2A7D8 /* FeedKit */,
 				96281433244A561100A2A7D8 /* Shimmer.swift */,
 			);
@@ -755,6 +758,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9650E3FC244DDF6F006802EF /* ImageCacher */ = {
+			isa = PBXGroup;
+			children = (
+				9650E3FF244DDFAA006802EF /* ImageCache.swift */,
+			);
+			path = ImageCacher;
+			sourceTree = "<group>";
+		};
 		CB479ED55EECDA36085707CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -775,7 +786,6 @@
 				962812B62449DE5F00A2A7D8 /* Sources */,
 				962812B72449DE5F00A2A7D8 /* Frameworks */,
 				962812B82449DE5F00A2A7D8 /* Resources */,
-				2F43189078C60707DE37E9BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -845,23 +855,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2F43189078C60707DE37E9BA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Test/Pods-Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Test/Pods-Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test/Pods-Test-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		66A0E53D3A4D405382E59091 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -977,6 +970,7 @@
 				9628131C244A27AB00A2A7D8 /* APIManager.swift in Sources */,
 				962813D8244A3C8400A2A7D8 /* RSSFeedItemEnclosure.swift in Sources */,
 				962813C1244A3C8400A2A7D8 /* AtomPath.swift in Sources */,
+				9650E400244DDFAA006802EF /* ImageCache.swift in Sources */,
 				96281411244A3C8400A2A7D8 /* String + toBool.swift in Sources */,
 				962813F4244A3C8400A2A7D8 /* MediaRestriction.swift in Sources */,
 				962813FB244A3C8400A2A7D8 /* MediaCategory.swift in Sources */,

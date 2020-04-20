@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class HomeHeaderViewCell: UICollectionViewCell {
 
@@ -31,19 +30,7 @@ class HomeHeaderViewCell: UICollectionViewCell {
         headerTitle.text = src.title
         headerSubtitle.text = src.subtitle
         
-        let url = URL(string: src.imageUrl)
-        let processor = RoundCornerImageProcessor(cornerRadius: UIConstant.radius * 5)
-        headerImage.kf.indicatorType = .activity
-        headerImage.kf.setImage(
-            with: url,
-            placeholder: UIImage(named: "ic_placeholder"),
-            options: [
-                .processor(processor),
-                .scaleFactor(UIScreen.main.scale),
-                .transition(.fade(1)),
-                .cacheOriginalImage
-            ])
-        
+        headerImage.loadImageAsync(with: src.imageUrl)
     }
     
     private func stopLoading() {

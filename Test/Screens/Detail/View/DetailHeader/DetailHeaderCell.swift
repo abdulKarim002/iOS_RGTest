@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class DetailHeaderCell: UITableViewCell {
 
@@ -28,20 +27,10 @@ class DetailHeaderCell: UITableViewCell {
     }
     
     func populateDataWith(src:HomeModel) {
-        let url = URL(string: src.imageUrl)
-        let processor = RoundCornerImageProcessor(cornerRadius: UIConstant.radius * 5)
-        detailImageView.kf.indicatorType = .activity
-        detailImageView.kf.setImage(
-            with: url,
-            placeholder: UIImage(named: "ic_placeholder"),
-            options: [
-                .processor(processor),
-                .scaleFactor(UIScreen.main.scale),
-                .transition(.fade(1)),
-                .cacheOriginalImage
-            ])
-        
+        detailImageView.loadImageAsync(with: src.imageUrl)
         dateAndAuthorName.text = "\(src.pubDate.getDateFormateby("MMM d")) . \(src.author)"
+        detailImageView.clipsToBounds = true
+        detailImageView.layer.cornerRadius = UIConstant.radius*2
     }
 }
 

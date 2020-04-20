@@ -2,7 +2,7 @@
 platform :ios, '10.0'
 
 def uipods
-pod 'Kingfisher', '~> 5.0'
+#pod 'Kingfisher', '~> 5.0'
 end
 
 def sharingPods
